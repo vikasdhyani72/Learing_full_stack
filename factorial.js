@@ -7,3 +7,4 @@ function factorial(n) {
 }
 let factorialOfNums = factorial(5); //adding new print again to push
 console.log(factorialOfNums); //printing factorial of numbers
+//change locally
