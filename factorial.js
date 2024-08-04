@@ -6,4 +6,4 @@ function factorial(n) {
   }
 }
 let factorialOfNums = factorial(5);
-console.log(factorialOfNums);
+console.log(factorialOfNums); //printing factorial of numbers
