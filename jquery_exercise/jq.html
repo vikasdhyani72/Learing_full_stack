@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        //   $(document).ready(function () {   or
+        // $("#hide").click(function () {
+        //   // first it will run
+        //   alert("hide me");
+
+        //   $("h1").dblclick(function () {
+        //     // second
+        //     $(this).hide();
+
+        //     $("h2").mouseenter(function () {
+        //       // third
+        //       $(this).hide();
+
+        //       $("p").mouseleave(function () {
+        //         // fourth
+        //         $(this).hide();
+        //       });
+        //       $("h3").hover(function () {
+        //         // fifth
+        //         alert("hide me also");
+        //       });
+        //     });
+        //   });
+        // });
+        $("input").focus(function () {
+          $(this).css("background-color", "yellow");
+        });
+        $("input").blur(function () {
+          $(this).css("background-color", "green");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" placeholder="name" /> <br />
+      <label for="name">email:</label>
+      <input type="text" placeholder="email" />
+    </form>
+    <!-- <h1>this is a heading</h1>
+    <h2>this is anothor heading</h2>
+    <h3>third heading</h3>
+    <p>i m paragraph, hide me</p>
+    <p>i m also paragraph please hide me</p>
+    <button id="hide">ok i am for hiding you guys</button> -->
+  </body>
+</html>

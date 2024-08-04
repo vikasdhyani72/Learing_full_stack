@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">here we load data</p>
+    <button onclick="loadData()">click me</button>
+    <script>
+      function loadData() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.readyState == 200) {
+            document.getElementById("demo").innerHTML = this.responseText;
+            //console.log(this.responseText);
+          } else if (this.readyState === 4 && this.readyState == 404) {
+            document.getElementById("demo").innerHTML = "file not found";
+          }
+        };
+        xhttp.open("GET", "demo1.text", true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <title>Attach a click and double-click event to the <p> element</title>
+    <script>
+        $(function(){
+            $("p").click(function(){
+            $( "<p>This is a click Event</p>").appendTo( "#result" );
+            });
+            $("p").dblclick(function(){
+                $( "<p>This is a double-click Event</p>"  ).appendTo( "#result" );
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <p>Click me!</p>
+    <div id="result"></div>
+</body>
+</html>

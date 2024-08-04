@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callBackHell</title>
+  </head>
+  <body>
+    <p>Callback hell in JavaScript refers to a situation where multiple nested callbacks are used, making the code difficult to read and maintain. This often occurs when handling a series of asynchronous operations that depend on the results of the previous ones.</p>
+    <h2 id="h1">headingOne</h2>
+    <h2 id="h2">headingOne</h2>
+    <h2 id="h3">headingOne</h2>
+    <button id="btn">change color</button>
+    <script>
+      let headOne = document.getElementById("h1");
+      let headTwo = document.getElementById("h2");
+      let headThree = document.getElementById("h3");
+      let button = document.getElementById("btn");
+      button.addEventListener("click", function () {
+        setTimeout(() => {
+          headOne.style.color = "red";
+          setTimeout(() => {
+            headTwo.style.color = "green";
+            setTimeout(() => {
+              headThree.style.color = "blue";
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+      p {
+        height: 100px;
+        width: 300px;
+        background-color: red;
+        color: black;
+        padding: 20px;
+        font-size: large;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#hide").click(function () {
+          $("p").hide(1000);
+        });
+        $("#show").click(function () {
+          $("p").show(2000);
+        });
+        $("#toggle").click(function () {
+          $("p").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="toggle" type="button">toggle</button>
+    <p>hide me or show me</p>
+    <button id="hide" type="button">Hide</button>
+    <button id="show" type="button">show</button>
+  </body>
+</html>

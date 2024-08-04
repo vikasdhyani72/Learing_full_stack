@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>conditional statement</title>
+    <style>
+      h1 {
+        color: forestgreen;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="greet"></h1>
+    <script>
+      if (new Date().getHours() <= 12) {
+        document.getElementById("greet").innerHTML = "Good Morning !!!";
+      } else if (new Date().getHours() <= 15) {
+        document.getElementById("greet").innerHTML = "Good Afternoon !!!";
+      } else {
+        document.getElementById("greet").innerHTML = "Good Evening !!!";
+      }
+    </script>
+  </body>
+</html>

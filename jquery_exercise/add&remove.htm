@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add&remove</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("#add").click(function () {
+          $("p").append(" universe"); // prepend for add item in begining
+        });
+        $("#add").click(function () {
+          $("ol").append(" <li>forth item</li> ");
+        });
+        $("#remove").click(function () {
+          $("h4").remove();
+        });
+        $("#change").click(function () {
+          $("h3").text("kallu prasad");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h3>vikas dhyani</h3>
+    <h4>Hello world</h4>
+    <p>Hello</p>
+    <ol>
+      <li>fist Item</li>
+      <li>second Item</li>
+      <li>third Item</li>
+    </ol>
+    <button id="add">add me</button>
+    <button id="remove">remove me</button>
+    <button id="change">change me</button>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roughwork</title>
+    <style>
+      button {
+        margin-top: 50px;
+        margin-left: 50px;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        background-color: blueviolet;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>js event</h1>
+    <script src="rough.js"></script>
+    <p id="res"></p>
+    <p id="result"></p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('res').innerHTML=Date()">what is the time ?
+    </button>
+    <button type="button" onclick="this.innerHTML=Date()">know the time ? click me 🤭
+    </button>
+    <button type="button" onclick="showTime()">what is the time ?</button>
+    <script>
+      function showTime() {
+        return (document.getElementById("result").innerHTML = Date());
+      }
+    </script>
+  </body>
+</html>
